@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -14,12 +15,25 @@ export default function ProvinceSelectorPage() {
   const [provinces, setProvinces] = useState<Province[]>([]);
   const [loading, setLoading] = useState(false);
   const [selectedProvince, setSelectedProvince] = useState<string>('');
+  const [mounted, setMounted] = useState(false);
   const { profile, setSelectedProvinceId } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    loadProvinces();
+    setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      loadProvinces();
+    }
+  }, [mounted]);
+
+  useEffect(() => {
+    if (mounted && profile?.role !== 'admin') {
+      router.push('/dashboard');
+    }
+  }, [profile, router, mounted]);
 
   const loadProvinces = async () => {
     try {
@@ -36,17 +50,16 @@ export default function ProvinceSelectorPage() {
   };
 
   const handleContinue = () => {
-    if (selectedProvince) {
+    if (selectedProvince && mounted) {
       setSelectedProvinceId(selectedProvince);
       router.push('/dashboard');
     }
   };
 
-  useEffect(() => {
-    if (profile?.role !== 'admin') {
-      router.push('/dashboard');
-    }
-  }, [profile, router]);
+  // Don't render until mounted to avoid hydration issues
+  if (!mounted) {
+    return null;
+  }
 
   if (profile?.role !== 'admin') {
     return null;

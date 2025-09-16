@@ -20,8 +20,13 @@ export default function FirstLoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const { toast } = useToast();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,13 +70,19 @@ export default function FirstLoginPage() {
         description: 'Sua senha foi alterada com sucesso.',
       });
 
-      router.push('/dashboard');
+      if (mounted) {
+        router.push('/dashboard');
+      }
     } catch (err) {
       setError('Erro ao atualizar senha. Tente novamente.');
     } finally {
       setLoading(false);
     }
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-white">
