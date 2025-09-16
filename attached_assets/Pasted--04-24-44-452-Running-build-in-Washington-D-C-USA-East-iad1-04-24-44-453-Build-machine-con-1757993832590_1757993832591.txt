@@ -1,0 +1,89 @@
+[04:24:44.452] Running build in Washington, D.C., USA (East) – iad1
+[04:24:44.453] Build machine configuration: 2 cores, 8 GB
+[04:24:44.470] Cloning github.com/42skillar/cruzx (Branch: main, Commit: bbd89b9)
+[04:24:44.633] Previous build caches not available
+[04:24:44.750] Cloning completed: 278.000ms
+[04:24:45.208] Running "vercel build"
+[04:24:45.617] Vercel CLI 47.1.1
+[04:24:45.986] Installing dependencies...
+[04:24:48.719] npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[04:24:49.296] npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[04:24:49.541] npm warn deprecated glob@7.1.7: Glob versions prior to v9 are no longer supported
+[04:24:50.872] npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[04:24:50.901] npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+[04:24:52.928] npm warn deprecated eslint@8.49.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[04:24:58.838] 
+[04:24:58.838] added 530 packages in 13s
+[04:24:58.839] 
+[04:24:58.839] 147 packages are looking for funding
+[04:24:58.839]   run `npm fund` for details
+[04:24:58.905] Detected Next.js version: 13.5.1
+[04:24:58.909] Running "npm run build"
+[04:24:59.022] 
+[04:24:59.022] > nextjs@0.1.0 build
+[04:24:59.022] > next build
+[04:24:59.022] 
+[04:24:59.484] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[04:24:59.485] This information is used to shape Next.js' roadmap and prioritize features.
+[04:24:59.486] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[04:24:59.486] https://nextjs.org/telemetry
+[04:24:59.486] 
+[04:24:59.555]    Creating an optimized production build...
+[04:25:08.709] Browserslist: caniuse-lite is outdated. Please run:
+[04:25:08.709]   npx update-browserslist-db@latest
+[04:25:08.710]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[04:25:12.248] Browserslist: caniuse-lite is outdated. Please run:
+[04:25:12.249]   npx browserslist@latest --update-db
+[04:25:12.250]   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+[04:25:13.071]  ⚠ Compiled with warnings
+[04:25:13.071] 
+[04:25:13.071] ./node_modules/@supabase/realtime-js/dist/main/RealtimeClient.js
+[04:25:13.072] Critical dependency: the request of a dependency is an expression
+[04:25:13.072] 
+[04:25:13.072] Import trace for requested module:
+[04:25:13.072] ./node_modules/@supabase/realtime-js/dist/main/RealtimeClient.js
+[04:25:13.072] ./node_modules/@supabase/realtime-js/dist/main/index.js
+[04:25:13.072] ./node_modules/@supabase/supabase-js/dist/main/index.js
+[04:25:13.072] ./lib/supabase.ts
+[04:25:13.072] ./app/province-selector/page.tsx
+[04:25:13.073] 
+[04:25:13.073]    Skipping linting
+[04:25:13.073]    Checking validity of types...
+[04:25:21.678]    Collecting page data...
+[04:25:28.979]    Generating static pages (0/9)...
+[04:25:29.061] Supabase environment variables not configured. Please update .env.local with your Supabase credentials.
+[04:25:29.072]    Generating static pages (2/9)
+[04:25:29.072] 
+[04:25:29.164]    Generating static pages (4/9)
+[04:25:29.164] 
+[04:25:29.227]    Generating static pages (6/9)
+[04:25:29.227] 
+[04:25:29.280] ReferenceError: location is not defined
+[04:25:29.280]     at /vercel/path0/.next/server/chunks/827.js:41:5709
+[04:25:29.280]     at /vercel/path0/.next/server/chunks/827.js:41:6661
+[04:25:29.280]     at t.startTransition (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:215699)
+[04:25:29.281]     at Object.push (/vercel/path0/.next/server/chunks/827.js:41:6649)
+[04:25:29.281]     at p (/vercel/path0/.next/server/app/province-selector/page.js:1:2612)
+[04:25:29.281]     at Vn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:132896)
+[04:25:29.281]     at Un (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:146460)
+[04:25:29.281]     at zn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:132454)
+[04:25:29.281]     at Vn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:133047)
+[04:25:29.281]     at Vn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:135205)
+[04:25:29.293] 
+[04:25:29.293] Error occurred prerendering page "/province-selector". Read more: https://nextjs.org/docs/messages/prerender-error
+[04:25:29.293] ReferenceError: location is not defined
+[04:25:29.294]     at /vercel/path0/.next/server/chunks/827.js:41:5709
+[04:25:29.294]     at /vercel/path0/.next/server/chunks/827.js:41:6661
+[04:25:29.294]     at t.startTransition (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:215699)
+[04:25:29.294]     at Object.push (/vercel/path0/.next/server/chunks/827.js:41:6649)
+[04:25:29.294]     at p (/vercel/path0/.next/server/app/province-selector/page.js:1:2612)
+[04:25:29.294]     at Vn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:132896)
+[04:25:29.295]     at Un (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:146460)
+[04:25:29.295]     at zn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:132454)
+[04:25:29.295]     at Vn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:133047)
+[04:25:29.295]     at Vn (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:1:135205)
+[04:25:29.295]  ✓ Generating static pages (9/9)
+[04:25:29.295] 
+[04:25:29.295] > Export encountered errors on following paths:
+[04:25:29.296] 	/province-selector/page: /province-selector
+[04:25:29.346] Error: Command "npm run build" exited with 1
