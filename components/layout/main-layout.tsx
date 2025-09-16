@@ -55,7 +55,6 @@ export function MainLayout({ children }: MainLayoutProps) {
       toast({
         title: 'Modo offline',
         description: 'Você pode continuar trabalhando. Os dados serão sincronizados quando a conexão for restaurada.',
-        variant: 'secondary'
       });
     };
 
