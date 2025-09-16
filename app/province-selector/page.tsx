@@ -42,8 +42,13 @@ export default function ProvinceSelectorPage() {
     }
   };
 
+  useEffect(() => {
+    if (profile?.role !== 'admin') {
+      router.push('/dashboard');
+    }
+  }, [profile, router]);
+
   if (profile?.role !== 'admin') {
-    router.push('/dashboard');
     return null;
   }
 
