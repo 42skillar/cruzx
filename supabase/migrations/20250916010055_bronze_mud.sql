@@ -12,7 +12,7 @@
       - `updated_at` (timestamp)
       - `first_login` (boolean, default true)
 
-  2. Security
+  2. Security 
     - Enable RLS on `profiles` table
     - Add policies for users to read/update their own profile
     - Add policies for admins to manage profiles in their province

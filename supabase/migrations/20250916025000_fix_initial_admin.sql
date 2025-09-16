@@ -5,7 +5,7 @@
   by using a SECURITY DEFINER function that bypasses RLS to check
   if any profiles exist in the database.
 */
-
+ 
 -- Create a secure function to check if any profiles exist
 -- This function bypasses RLS to get accurate count
 CREATE OR REPLACE FUNCTION public.can_create_first_admin()

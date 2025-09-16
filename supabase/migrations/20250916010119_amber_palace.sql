@@ -13,7 +13,7 @@
       - `province_id` (uuid, references provinces)
       - `created_by` (uuid, references profiles)
       - `created_at` (timestamp)
-
+ 
   2. Security
     - Enable RLS on `donations` table
     - Add policies for users to manage donations in their province

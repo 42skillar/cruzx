@@ -5,7 +5,7 @@
     - `provinces`
       - `id` (uuid, primary key)
       - `name` (text, province name)
-      - `code` (text, province code)
+      - `code` (text, province code) 
       - `created_at` (timestamp)
 
   2. Security

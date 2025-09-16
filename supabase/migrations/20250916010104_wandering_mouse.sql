@@ -10,7 +10,7 @@
       - `birth_date` (date)
       - `age` (integer, calculated)
       - `gender` (enum: M, F)
-      - `blood_type` (enum: A+, A-, B+, B-, AB+, AB-, O+, O-)
+      - `blood_type` (enum: A+, A-, B+, B-, AB+, AB-, O+, O-) 
       - `weight` (numeric, in kg)
       - `height` (numeric, in cm)
       - `address` (text)
