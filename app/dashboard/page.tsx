@@ -28,7 +28,12 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (profile && selectedProvinceId) {
+    if (!profile) {
+      setLoading(false);
+      return;
+    }
+    
+    if (profile && (profile.role !== 'admin' || selectedProvinceId)) {
       loadStats();
     }
   }, [profile, selectedProvinceId]);
@@ -176,6 +181,28 @@ export default function DashboardPage() {
   ];
 
   const visibleActions = quickActions.filter(action => action.permission);
+
+  if (!profile) {
+    return (
+      <MainLayout>
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <Card className="w-full max-w-md">
+            <CardHeader className="text-center">
+              <CardTitle>Configuração Necessária</CardTitle>
+              <CardDescription>
+                Seu perfil está sendo configurado. Por favor, complete o primeiro login.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <Button onClick={() => router.push('/auth/first-login')}>
+                Completar Configuração
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </MainLayout>
+    );
+  }
 
   if (loading) {
     return (

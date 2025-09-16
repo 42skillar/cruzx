@@ -98,14 +98,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    if (user && isAuthPage) {
-      router.push('/dashboard');
+    // Check for first login or missing profile FIRST
+    if (user && !profile && !isAuthPage && pathname !== '/auth/first-login') {
+      router.push('/auth/first-login');
       return;
     }
 
-    // Check for first login
     if (user && profile?.first_login && pathname !== '/auth/first-login') {
       router.push('/auth/first-login');
+      return;
+    }
+
+    // Only redirect authenticated users from auth pages if they don't need first-login
+    if (user && isAuthPage && pathname !== '/auth/first-login') {
+      router.push('/dashboard');
       return;
     }
 
