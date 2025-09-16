@@ -1,0 +1,64 @@
+[04:40:38.586] Running build in Washington, D.C., USA (East) – iad1
+[04:40:38.587] Build machine configuration: 2 cores, 8 GB
+[04:40:38.624] Cloning github.com/42skillar/cruzx (Branch: main, Commit: 3593dcb)
+[04:40:38.631] Skipping build cache, deployment was triggered without cache.
+[04:40:38.915] Cloning completed: 291.000ms
+[04:40:39.256] Running "vercel build"
+[04:40:39.641] Vercel CLI 47.1.1
+[04:40:39.994] Installing dependencies...
+[04:40:42.924] npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[04:40:43.566] npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[04:40:43.782] npm warn deprecated glob@7.1.7: Glob versions prior to v9 are no longer supported
+[04:40:45.061] npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[04:40:45.131] npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+[04:40:46.942] npm warn deprecated eslint@8.49.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[04:40:52.726] 
+[04:40:52.727] added 530 packages in 12s
+[04:40:52.727] 
+[04:40:52.728] 147 packages are looking for funding
+[04:40:52.728]   run `npm fund` for details
+[04:40:52.785] Detected Next.js version: 13.5.1
+[04:40:52.790] Running "npm run build"
+[04:40:52.899] 
+[04:40:52.899] > nextjs@0.1.0 build
+[04:40:52.900] > next build
+[04:40:52.900] 
+[04:40:53.345] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[04:40:53.346] This information is used to shape Next.js' roadmap and prioritize features.
+[04:40:53.346] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[04:40:53.347] https://nextjs.org/telemetry
+[04:40:53.347] 
+[04:40:53.415]    Creating an optimized production build...
+[04:41:03.291] Browserslist: caniuse-lite is outdated. Please run:
+[04:41:03.291]   npx update-browserslist-db@latest
+[04:41:03.292]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[04:41:06.670] Browserslist: caniuse-lite is outdated. Please run:
+[04:41:06.671]   npx browserslist@latest --update-db
+[04:41:06.672]   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+[04:41:07.568]  ⚠ Compiled with warnings
+[04:41:07.570] 
+[04:41:07.571] ./node_modules/@supabase/realtime-js/dist/main/RealtimeClient.js
+[04:41:07.571] Critical dependency: the request of a dependency is an expression
+[04:41:07.571] 
+[04:41:07.571] Import trace for requested module:
+[04:41:07.571] ./node_modules/@supabase/realtime-js/dist/main/RealtimeClient.js
+[04:41:07.571] ./node_modules/@supabase/realtime-js/dist/main/index.js
+[04:41:07.571] ./node_modules/@supabase/supabase-js/dist/main/index.js
+[04:41:07.571] ./lib/supabase.ts
+[04:41:07.571] ./app/province-selector/page.tsx
+[04:41:07.571] 
+[04:41:07.571]    Skipping linting
+[04:41:07.571]    Checking validity of types...
+[04:41:14.920] Failed to compile.
+[04:41:14.920] 
+[04:41:14.920] ./app/auth/first-login/page.tsx:27:3
+[04:41:14.920] Type error: Cannot find name 'useEffect'.
+[04:41:14.920] 
+[04:41:14.921] [0m [90m 25 | [39m  [36mconst[39m { toast } [33m=[39m useToast()[33m;[39m[0m
+[04:41:14.921] [0m [90m 26 | [39m[0m
+[04:41:14.921] [0m[31m[1m>[22m[39m[90m 27 | [39m  useEffect(() [33m=>[39m {[0m
+[04:41:14.921] [0m [90m    | [39m  [31m[1m^[22m[39m[0m
+[04:41:14.921] [0m [90m 28 | [39m    setMounted([36mtrue[39m)[33m;[39m[0m
+[04:41:14.921] [0m [90m 29 | [39m  }[33m,[39m [])[33m;[39m[0m
+[04:41:14.921] [0m [90m 30 | [39m[0m
+[04:41:14.999] Error: Command "npm run build" exited with 1
